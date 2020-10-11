@@ -5,7 +5,7 @@ const port = process.env.PORT | 80;
 var server = app.listen(port, () => console.log(`Listening on Port ${port}`));
 
 app.use(function (req, res, next) {
-	console.log('Got Request, Time: %d', Date.now());
+	console.log(`Got Request, Time: ${Date.now()}, URL: ${req.url}`);
 	next();
 })
 
