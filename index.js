@@ -14,5 +14,5 @@ app.use(express.static('public'));
 
 // since this catches everything, its important that it always stays at the bottom of the code
 app.get("*", (req, res) => {
-  res.sendFile(process.cwd() + '/public/404.html');
+	res.sendFile(process.cwd() + '/public/404.html');
 });
